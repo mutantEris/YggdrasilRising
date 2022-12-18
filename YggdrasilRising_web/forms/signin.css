@@ -1,33 +1,53 @@
-.translucent-form-overlay {
-  max-width: 500px;
-  width: 100%;
-  background-color: rgba(54, 54, 54, 0.8);
-  padding: 20px;
-  color: #fefefe;
+.sign-in-form {
+  padding: 1rem 1.5em;
+  border-radius: 0.5rem;
+  background-color: #3d454f;
 }
 
-.translucent-form-overlay .columns.row {
-  display: block;
+.sign-in-form h4 {
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
-.translucent-form-overlay h3,
-.translucent-form-overlay label {
-  color: #fefefe;
+.sign-in-form label {
+  text-transform: uppercase;
+  color: #998a73;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-.translucent-form-overlay input,
-.translucent-form-overlay select {
-  color: #8a8a8a;
+.sign-in-form input {
+  color: white;
 }
 
-.translucent-form-overlay input::-webkit-input-placeholder {
-  color: #8a8a8a;
+.sign-in-form input:focus {
+  opacity: 0.8;
 }
 
-.translucent-form-overlay input:-ms-input-placeholder {
-  color: #8a8a8a;
+.sign-in-form-username,
+.sign-in-form-password {
+  border-radius: 30px;
+  border: none;
+  opacity: 0.1;
+  transition: all ease 0.4s;
 }
 
-.translucent-form-overlay input::placeholder {
-  color: #8a8a8a;
+.sign-in-form-button {
+  border-radius: 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 30%;
+  padding: 1rem;
+  transition: all ease 0.4s;
+}
+
+.sign-in-form-button:hover {
+  background-color: #7c7c7c;
+  border-color: #7c7c7c;
 }
