@@ -11,6 +11,8 @@ import ProtectedRoute from "./components/ProtectedRoute";
 function App() {  
 
   return (
+    <div className="auth-context">
+      <div className="auth-width">
       <AuthContextProvider>
       <Routes>
         <Route path="/" element={<Signin />} />
@@ -22,7 +24,9 @@ function App() {
               <Account />              
             </ProtectedRoute>} />
       </Routes>
-    </AuthContextProvider>  
+    </AuthContextProvider>
+    </div>  
+    </div>
   );
 }
 

@@ -1,46 +1,60 @@
-/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import { Link, useNavigate } from 'react-router-dom';
-import {UserAuth} from '../context/AuthContext'
+import { Link, useNavigate } from "react-router-dom";
+// eslint-disable-next-line no-unused-vars
+import { UserAuth } from "../context/AuthContext";
 
 
-const Signup = (props) => {
-  const [email, setEmail] = useState('');
-  const [pass, setPass] = useState('');
-  const { createUser } = UserAuth();
-  const [error, setError] = useState('');
+
+const Signin = (props) => {
+  const [email, setEmail] = useState("");
+  const [pass, setPass] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
-  
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError('')
+    error.preventDefault();
+    setError("");
     try {
-      await createUser(email, pass)
-      // Login(email, pass)
-      // navigate('/account')
-    } catch (e) {
-      setError(e.message)
-      console.log(e.message)
-  }
-}
-  
+      Signin(email, pass);
+      navigate("/account");
+    } catch (error) {
+      setError(error.message);
+      console.log(error.message);
+    }
+  };
 
   return (
-<>
-      <h1>Sign up for a free account</h1>
-      <p>
-        Already have an account? <Link to="/" className="underline">Sign in</Link>
-      </p>
-      <form onSubmit={handleSubmit}>
-          <label htmlFor="email">email</label>
-          <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
-          <label htmlFor="password">password</label>
-          <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
-          <button type="submit">Sign Up</button>
+    <div className="Main-container">
+          <h2>Sign Up</h2>
+      <form className="register-form" onSubmit={handleSubmit}>
+        {/* <label htmlFor="email">email</label> */}
+        <div className="InputContainer">
+          <div className="box">
+          <input value={email}onChange={(error) => setEmail(error.target.value)}
+            type="email"
+            placeholder="Enter Email"
+            id="email"
+            name="email"
+          />
+          {/* <label htmlFor="password">password</label> */}
+          <input
+            value={pass}
+            onChange={(error) => setPass(error.target.value)}
+            type="password"
+            placeholder="Enter Password"
+            id="password"
+            name="password"
+          />    
+          </div>
+          {/* create a sign in button */}
+          <button className="b-container" type="submit">Sign In</button>
+          <div className="Horizontal"></div>
+        </div>
+        
       </form>
-  </>
-  )
-}
 
-export default Signup;
+    </div>
+  );
+};
+
+export default Signin;
