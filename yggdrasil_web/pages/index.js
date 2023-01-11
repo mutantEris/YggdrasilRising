@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from './_app';
-import Navbar from './Components/NavBar.jsx';
+import NavBar from './Components/NavBar.jsx';
 import React, { Fragment } from 'react';
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
     </div>
-    <Navbar />
+    <NavBar />
     </Fragment>
 
   )};
