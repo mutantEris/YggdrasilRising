@@ -4,11 +4,13 @@
 
 @layer base {
   body {
-    @apply bg-cover-center-no-repeat-url-("/../public/background.jpg");
-    @apply bg-[ababab] text-[#000000] tracking-wide;
+    /*background-image: url("/../public/background.jpg");
     background-size: cover;
     background-position: center center;
-    opacity: 0.9;
+    background-repeat: no-repeat;
+    opacity: 0.9; */
+
+    @apply bg-[#e7e2e2] text-[#000000] tracking-wide;
   }
 
   h1,
