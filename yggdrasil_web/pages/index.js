@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import NavBar from './Components/NavBar.jsx';
+import Main from './Components/Main.jsx';
+import About from './Components/about.jsx';
 import React, { Fragment } from 'react';
 
 export default function Home() {
@@ -12,6 +14,8 @@ export default function Home() {
       </Head>
     </div>
     <NavBar />
+    <Main />
+    <About />
     </Fragment>
 
 
