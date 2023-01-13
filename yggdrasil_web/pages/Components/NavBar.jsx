@@ -75,28 +75,28 @@ const NavBar = () => {
 									<p className='w-[85] md:w-[90] py-4'>
 										Welome to Yggdrasil Rising
 									</p>
-								</div>
-								<div className='py-4 flex flex-col'>
-									<ul className='uppercase'>
-										<Link href='/'>
-											<li className='py-4 text-sm'>Home</li>
-										</Link>
-										<Link href='/about'>
-											<li className='py-4 text-sm'>About</li>
-										</Link>
-										<Link href='/gallery'>
-											<li className='py-4 text-sm'>Gallery</li>
-										</Link>
-										<Link href='/contact'>
-											<li className='py-4 text-sm'>Contact</li>
-										</Link>
-										<Link href='/chat'>
-											<li className='py-4 text-sm'>Chat</li>
-										</Link>
-										<Link href='/signin'>
-											<li className='py-4 text-sm'>Sign In</li>
-										</Link>
-									</ul>
+									<div className='py-4 flex flex-col'>
+										<ul className='uppercase'>
+											<Link href='/'>
+												<li className='py-4 text-sm'>Home</li>
+											</Link>
+											<Link href='/about'>
+												<li className='py-4 text-sm'>About</li>
+											</Link>
+											<Link href='/gallery'>
+												<li className='py-4 text-sm'>Gallery</li>
+											</Link>
+											<Link href='/contact'>
+												<li className='py-4 text-sm'>Contact</li>
+											</Link>
+											<Link href='/chat'>
+												<li className='py-4 text-sm'>Chat</li>
+											</Link>
+											<Link href='/signin'>
+												<li className='py-4 text-sm'>Sign In</li>
+											</Link>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
