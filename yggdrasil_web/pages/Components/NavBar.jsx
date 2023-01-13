@@ -50,14 +50,14 @@ const NavBar = () => {
 			<div
 				className={nav ? "fixed left-0 top-0 w-full h-screen bg-black/70" : ""}
 			>
-				<div
-					className={
-						nav
-							? "md:hidden fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f1] p-10 ease-in duration-500"
-							: "fixed left-[-100%] top-0 p-10 ease-in duration-500"
-					}
-				>
-					<div>
+				<div>
+					<div
+						className={
+							nav
+								? "md:hidden fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f1] p-10 ease-in duration-500"
+								: "fixed left-[-100%] top-0 p-10 ease-in duration-500"
+						}
+					>
 						<div className='flex w-full items-center justify-between'>
 							<Image
 								src='/../public/NavLogo.jpg'
@@ -65,37 +65,39 @@ const NavBar = () => {
 								width='75'
 								height='75'
 							/>
-							<div
-								onClick={handleNav}
-								className='rounded-full shadow-lg shadow-gray-400 p-3
+							<div>
+								<div
+									onClick={handleNav}
+									className='rounded-full shadow-lg shadow-gray-400 p-3
 							curser-pointer'
-							>
-								<AiOutlineClose />
-								<div className='border-b border-gray-300 my-4'>
-									<p className='w-[85] md:w-[90] py-4'>
-										Welome to Yggdrasil Rising
-									</p>
-									<div className='py-4 flex flex-col'>
-										<ul className='uppercase'>
-											<Link href='/'>
-												<li className='py-4 text-sm'>Home</li>
-											</Link>
-											<Link href='/about'>
-												<li className='py-4 text-sm'>About</li>
-											</Link>
-											<Link href='/gallery'>
-												<li className='py-4 text-sm'>Gallery</li>
-											</Link>
-											<Link href='/contact'>
-												<li className='py-4 text-sm'>Contact</li>
-											</Link>
-											<Link href='/chat'>
-												<li className='py-4 text-sm'>Chat</li>
-											</Link>
-											<Link href='/signin'>
-												<li className='py-4 text-sm'>Sign In</li>
-											</Link>
-										</ul>
+								>
+									<AiOutlineClose />
+									<div className='border-b border-gray-300 my-4'>
+										<p className='w-[85] md:w-[90] py-4'>
+											Welome to Yggdrasil Rising
+										</p>
+										<div className='py-4 flex flex-col'>
+											<ul className='uppercase'>
+												<Link href='/'>
+													<li className='py-4 text-sm'>Home</li>
+												</Link>
+												<Link href='/about'>
+													<li className='py-4 text-sm'>About</li>
+												</Link>
+												<Link href='/gallery'>
+													<li className='py-4 text-sm'>Gallery</li>
+												</Link>
+												<Link href='/contact'>
+													<li className='py-4 text-sm'>Contact</li>
+												</Link>
+												<Link href='/chat'>
+													<li className='py-4 text-sm'>Chat</li>
+												</Link>
+												<Link href='/signin'>
+													<li className='py-4 text-sm'>Sign In</li>
+												</Link>
+											</ul>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -106,5 +108,4 @@ const NavBar = () => {
 		</div>
 	);
 };
-
 export default NavBar;
