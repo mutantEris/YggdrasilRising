@@ -1,9 +1,7 @@
 import Head from 'next/head'
-import styles from './_app';
 import NavBar from './Components/NavBar.jsx';
 import React, { Fragment } from 'react';
-// import "../styles/globals.css";
-import index from "./index.css";
+
 export default function Home() {
   return (
     <Fragment>
@@ -18,4 +16,3 @@ export default function Home() {
 
 
   )};
-  <p>this is a possible</p>
