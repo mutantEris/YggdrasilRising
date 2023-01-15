@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: 938ac1f3d56845947a1682ca160b8f3d
+  - enabled: 1
+    path: Assets/Scenes/Plane of Yggdrasil.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: bac39843076ff43489552466c9416461
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: f49b72395741efe48b75a9866f1c0e54, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 185f0ae9c81a8c641baa160a0e0b0d57, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 15f36d32f82375a4b8d8807b2fc7b6e6, type: 2}
