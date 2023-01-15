@@ -1,3 +1,3 @@
 # YggdrasilRising
 
-## ![yggdrasimage](YggdrasilRising/NotionYggdrasil.png)
+## ![yggdrasimage](NotionYggdrasil.png)
