@@ -7,7 +7,7 @@ const About = () => {
 		<div className='w-full md:h-screen p-2 flex items-center py-16'>
 			<div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8'>
 				<div className='col-span-2'>
-					<p>About</p>
+					<p>What</p>
 					<h2>How do you play the game?</h2>
 					<p>
 						Yggdrasil Rising is a turn-based strategy game. Each turn, you can
