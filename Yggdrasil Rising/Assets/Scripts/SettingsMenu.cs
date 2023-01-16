@@ -15,8 +15,6 @@ public class SettingsMenu : MonoBehaviour
         BGMSlider.value = PlayerPrefs.GetFloat("BGM", 1f);
         SFXSlider.value = PlayerPrefs.GetFloat("SFX", 1f);
     }
-
-
     public void Apply(){
         PlayerPrefs.SetFloat("BGM", BGMSlider.value);
         PlayerPrefs.SetFloat("SFX", SFXSlider.value);
@@ -29,6 +27,12 @@ public class SettingsMenu : MonoBehaviour
     public void ChangeSFX(){
         float volume = LinearToDecibel(SFXSlider.value);
         mixer.SetFloat("SFXVolume", volume);
+    }
+    public void SetVolume(){
+        mixer.SetFloat("BGMVolume", LinearToDecibel(PlayerPrefs.GetFloat("BGM", 1f)));
+        mixer.SetFloat("SFXVolume", LinearToDecibel(PlayerPrefs.GetFloat("SFX", 1f)));
+        BGMSlider.value = PlayerPrefs.GetFloat("BGM", 1f);
+        SFXSlider.value = PlayerPrefs.GetFloat("SFX", 1f);
     }
     private float LinearToDecibel(float linear)
     {
@@ -44,11 +48,5 @@ public class SettingsMenu : MonoBehaviour
         }
 
         return dB;
-    }
-    public void SetVolume(){
-        mixer.SetFloat("BGMVolume", LinearToDecibel(PlayerPrefs.GetFloat("BGM", 1f)));
-        mixer.SetFloat("SFXVolume", LinearToDecibel(PlayerPrefs.GetFloat("SFX", 1f)));
-        BGMSlider.value = PlayerPrefs.GetFloat("BGM", 1f);
-        SFXSlider.value = PlayerPrefs.GetFloat("SFX", 1f);
     }
 }
