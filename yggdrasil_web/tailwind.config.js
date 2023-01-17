@@ -4,4 +4,9 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: true, // or 'media' or 'class'
+  theme: {
+    extend: {},
+  },
+  plugins: [require('@tailwindcss/aspect-ratio')],
 }
