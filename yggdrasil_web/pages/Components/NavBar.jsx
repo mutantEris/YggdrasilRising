@@ -12,9 +12,9 @@ const NavBar = () => {
 		setNav(!nav);
 	};
 	return (
-		<div className='fixed w-full h-4 bg-[#998A] shadow-xl z-[100]'>
+		<div className='fixed w-full h-8 bg-[#998A] shadow-xl z-[100]'>
 			<div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
-				<Image src='/../public/NavLogo.jpg' alt='/' width='25' height='25' />
+				<Image src='/../public/NavLogo.jpg' alt='/' width='30' height='30' />
 				<div>
 					<ul className='hidden md:flex'>
 						<Link href='/'>
