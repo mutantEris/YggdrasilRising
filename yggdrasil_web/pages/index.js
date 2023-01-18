@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import NavBar from '/pages/Components/NavBar.jsx';
-import Main from '/pages/Main.jsx';
-import About from '/pages/about.jsx';
-import Gallery from '/pages/gallery.jsx';
+// import Main from '/pages/Main.jsx';
+// import About from '/pages/about.jsx';
+// import Gallery from '/pages/gallery.jsx';
 import React, { Fragment } from 'react';
 
 export default function Home() {
@@ -15,9 +15,9 @@ export default function Home() {
       </Head>
     </div>
     <NavBar />
-    <Main />
-    <About />
-    <Gallery />
+    {/* <Main /> */}
+    {/* <About /> */}
+    {/* <Gallery /> */}
     </Fragment>
 
 

@@ -1,15 +1,17 @@
+/** @format */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* @import url("https://fonts.googleapis.com/css2?family=Skranji&display=swap"); */
 body {
-  background-image: url("/../public/background.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  opacity: 0.9;
+	background-image: url("/../public/background.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	opacity: 0.9;
 
-  @apply bg-[#e7e2e2] text-[#000000] tracking-wide;
+	@apply bg-[#e7e2e2] text-[030303] tracking-wide font-sans;
 }
 
 h1,
@@ -18,17 +20,20 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-bold;
+	@apply font-bold;
 }
 h1 {
-  @apply text-4xl sm:text-5xl md:text-6xl;
+	@apply text-4xl sm:text-5xl md:text-6xl;
 }
 h2 {
-  @apply text-3xl sm:text-4xl md:text-5xl;
+	@apply text-3xl sm:text-4xl md:text-5xl;
 }
 li {
-  @apply cursor-pointer;
+	@apply cursor-pointer;
 }
 button {
-  @apply shadow-xl shadow-[#7c7c7c] rounded-xl uppercase bg-gradient-to-r from-[#7c7c7c] to-[#ababab] text-[#fff] font-bold tracking-widest;
+	@apply shadow-xl shadow-[#7c7c7c] rounded-xl uppercase bg-gradient-to-r from-[#7c7c7c] to-[#ababab] text-[#fff] font-bold tracking-widest;
+}
+p {
+	@apply text-[#030303];
 }

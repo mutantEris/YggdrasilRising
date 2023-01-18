@@ -1,50 +1,57 @@
 /** @format */
-import React from "react";
-import Image from "next/image";
-import { useState } from "react";
-import NavBar from "/pages/Components/NavBar.jsx";
-import { images } from "../next.config";
 
-function cn(...classes) {
-	return classes.filter(Boolean).join(" ");
-}
+import Head from "next/head";
+// import styles from "../styles/globals.css";
+import NavBar from "./Components/NavBar";
 
-export default function Gallery() {
+const images = [
+	{
+		id: 1,
+		url:
+			"https://www.istockphoto.com/photo/beautiful-creative-handmade-tree-house-for-kids-in-backyard-of-a-house-outdoors-gm1226284109-361262234?phrase=tree%20houses",
+		caption: "Image 1",
+	},
+	{
+		id: 2,
+		url:
+			"https://www.istockphoto.com/photo/tree-house-gm182035882-19399806?phrase=tree%20houses",
+		caption: "Image 2",
+	},
+	{
+		id: 3,
+		url:
+			"https://www.istockphoto.com/photo/woman-looking-out-window-of-nest-tree-house-gm483597881-483597881?phrase=tree%20houses",
+		caption: "Image 3",
+	},
+	{
+		id: 4,
+		url:
+			"https://www.istockphoto.com/photo/wooden-and-bamboo-house-on-a-big-tree-gm1328975552-412867607?phrase=tree%20houses",
+		caption: "Image 4",
+	},
+];
+
+const Gallery = () => {
 	return (
-		<div>
+		<div className={styles.container}>
 			<NavBar />
-			<div className='max-w-2xl mx-auto py 15 px-r sm:py-24 sm:px6 lg:max-w-7xl lg:px-8'>
-				<div className='grid gid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8'>
-					{/* {images.map((image) => (
-			  <yggdrasilImage key={image.id} image={image} /> */}
-					)
-				</div>
+			<Head>
+				<title>My Gallery</title>
+				<link rel='stylesheet' href='/styles.css' />
+			</Head>
+			<h1 className='text-2xl font-bold mb-4'>Tree House Builds</h1>
+			<div className='grid grid-cols-3 gap-4'>
+				{images.map((image) => (
+					<div key={image.id} className='relative'>
+						<img src={image.url} alt={image.caption} className='rounded-lg' />
+						<p className='absolute bottom-0 left-0 m-2 text-xs text-white bg-black'>
+							{image.caption}
+						</p>
+					</div>
+				))}
 			</div>
 		</div>
 	);
-}
+};
 
-function yggdrasilImage({ image }) {
-	const [isLoading, setIsLoading] = useState(true);
-	const className = isLoading
-		? "grayscale blur-2xl scale-110"
-		: "grayscale-0 blur-0 scale-100";
-	return (
-		<a href='#' className='group'>
-			<div className='aspect-w-1 aspect-h-1 xl:aspect-w-7 xl:aspect-h-8 w-full overflow-hidden rounded-lg bg-gray-200'>
-				<img
-					alt={image}
-					src={image.src}
-					layout='fill'
-					objectFit='cover'
-					className={`group-hover:opacity-75 duration-700 ease-in-out ${className}`}
-					onLoadingComplete={() => setIsLoading(false)}
-				/>
-			</div>
-			<h3 className='mt-4 text-sm text-gray-700'>Artboard</h3>
-			<p className='mt-1 text-lg font-medium text-gray-900'>$35</p>
-		</a>
-	);
-}
-<NavBar />;
-<Gallery />;
+export default Gallery;
